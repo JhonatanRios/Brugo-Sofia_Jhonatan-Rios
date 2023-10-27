@@ -23,7 +23,7 @@ public class OdontologoServiceTest {
         Connection connection = null;
         try {
             Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection("jdbc:h2:~/testParcial;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "sa");
+            connection = DriverManager.getConnection("jdbc:h2:~/parcial;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -36,10 +36,10 @@ public class OdontologoServiceTest {
         }
     }
     @Test
-    void deberiaAgregarUnPaciente_conH2(){
+    public void deberiaAgregarUnPaciente_conH2(){
         odontologoService = new OdontologoService(new OdontologoDaoH2());
-        Odontologo odontologoAGuardar = new  Odontologo(12345, "nombre2", "apellido2");
-        Odontologo odontologoGuardado =odontologoService.guardar(odontologoAGuardar);
+        Odontologo odontologoAGuardar = new Odontologo(12345, "nombre2", "apellido2");
+        Odontologo odontologoGuardado = odontologoService.guardar(odontologoAGuardar);
         assertNotNull(odontologoGuardado.getId());
     }
 

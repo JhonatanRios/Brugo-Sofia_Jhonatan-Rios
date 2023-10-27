@@ -15,7 +15,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
     private Connection connection;
     private PreparedStatement preparedStatement;
 
-    private static final String INSERT = "INSERT INTO ODONTOLOGOS (NUMERODEMATRICULA, NOMBRE, APELLIDO) VALUES(?, ?, ?, ?);";
+    private static final String INSERT = "INSERT INTO ODONTOLOGOS (NUMERODEMATRICULA, NOMBRE, APELLIDO) VALUES(?, ?, ?);";
     private static final String SELECT = "SELECT * FROM ODONTOLOGOS;";
 
     @Override
