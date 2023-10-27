@@ -2,20 +2,21 @@ package com.backend.parcial.dao.impl;
 
 import com.backend.parcial.dao.H2Connection;
 import com.backend.parcial.dao.IDao;
-import com.backend.parcial.model.Prueba;
+import com.backend.parcial.model.Domicilio;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
-
-public class PruebaDaoH2 implements IDao<Prueba> {
+import java.util.List;
+/*
+public class PruebaDaoH2 implements IDao<Domicilio> {
     private static final String INSERT = "INSERT INTO medicos(nombre, edad, profesion) VALUES(?, ?, ?, ?)";
     Logger LOGGER = Logger.getLogger(PruebaDaoH2.class);
     private Connection conn;
     private PreparedStatement stat;
 
     @Override
-    public Prueba registrar(Prueba prueba) {
-        Prueba pruebaResultado = null;
+    public Domicilio registrar(Domicilio prueba) {
+        Domicilio pruebaResultado = null;
         try {
             conn = H2Connection.getConnection();
             conn.setAutoCommit(false);
@@ -25,7 +26,7 @@ public class PruebaDaoH2 implements IDao<Prueba> {
             conn.commit();
             ResultSet result = stat.getGeneratedKeys();
             while (result.next()) {
-                pruebaResultado = new Prueba();
+                pruebaResultado = new Domicilio();
             }
         } catch (Exception e) {
             LOGGER.error(e.getMessage());
@@ -52,7 +53,16 @@ public class PruebaDaoH2 implements IDao<Prueba> {
     }
 
     @Override
-    public Prueba buscarPorId(int id) {
+    public Domicilio buscarPorId(int id) {
         return null;
     }
+
+    @Override
+    public List<Domicilio> buscarTodos() {
+        return null;
+    }
+
+
 }
+
+ */
